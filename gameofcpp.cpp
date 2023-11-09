@@ -4,18 +4,15 @@
 #include <random>
 #include <algorithm>
 
-// the above are the libraries that are going to be used in the program .
 
 std::vector<std::string> animals = {"elephant", "tiger", "lion", "giraffe", "zebra"};
 std::vector<std::string> teams = {"lakers", "yankees", "packers", "cowboys", "warriors"};
 std::vector<std::string> districts = {"manhattan", "brooklyn", "queens", "bronx", "staten island"};
 std::vector<std::string> films = {"inception", "avatar", "titanic", "jaws", "matrix"};
 std::vector<std::string> books = {"harrypotter", "tokillamockingbird", "prideandprejudice", "1984", "thegreatgatsby"};
-// the above lines define the vectors of strings that hold the words for differenct categories
 
 std::random_device rd;
 std::mt19937 gen(rd());
-// the above lines initializa a random number generatort
 
 std::string chooseCategory() {
     std::cout << "Choose a category:" << std::endl;
@@ -61,7 +58,6 @@ std::string chooseWord(const std::string& category) {
     std::shuffle(words.begin(), words.end(), gen);
     return words[0];
 }
-// the function above prompts the user to choose the category and return it as a string .
 
 std::string displayWord(const std::string& word, const std::vector<char>& guessedLetters) {
     std::string displayed;
@@ -74,7 +70,6 @@ std::string displayWord(const std::string& word, const std::vector<char>& guesse
     }
     return displayed;
 }
-// the function above takes the category as the input and returns a randomly choosen category .
 
 
 void playGame() {
@@ -133,7 +128,6 @@ void playGame() {
     }
 }
 
-// This function above contains the main logic of the game. It prompts the user for letter guesses, checks if the guessed letter is correct, keeps track of chances, and displays the results.
 
 int main() {
     playGame();
