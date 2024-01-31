@@ -117,7 +117,7 @@ void playGame() {
             }
         }
     }
-
+    
     std::cout << "Do you want to play again? (yes/no): ";
     std::string playAgain;
     std::cin >> playAgain;
